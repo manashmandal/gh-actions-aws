@@ -8,9 +8,9 @@ jobs:
       - name: ssh to server
         uses: appleboy/ssh-action@master
         with:
-          key: ${{ secrets.KEY }}
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
           script: |
             whoami
             ls -al
