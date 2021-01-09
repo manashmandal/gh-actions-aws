@@ -14,5 +14,5 @@ jobs:
           script: |
             whoami
             ls -al
-      # - name: "AWS CLI"
-      #   uses: ItsKarma/aws-cli@v1.70.0
+      - name: "AWS CLI"
+        uses: ItsKarma/aws-cli@v1.70.0
