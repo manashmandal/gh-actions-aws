@@ -5,8 +5,8 @@ jobs:
   pull_from_s3:
     runs-on: ubuntu-latest
     steps:
-      - name: "ssh"
-        uses: appleboy/ssh-actions@master
+      - name: ssh to server
+        uses: appleboy/ssh-action@master
         with:
           key: ${{ secrets.KEY }}
           host: ${{ secrets.HOST }}
