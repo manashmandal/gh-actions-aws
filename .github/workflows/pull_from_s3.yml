@@ -4,5 +4,6 @@ on: workflow_dispatch
 jobs:
   pull_from_s3:
     runs-on: ubuntu-latest
-    uses: ItsKarma/aws-cli@v1.70.0
     steps:
+      - name: "AWS CLI"
+        uses: ItsKarma/aws-cli@v1.70.0
