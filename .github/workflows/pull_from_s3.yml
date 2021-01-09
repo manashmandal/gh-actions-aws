@@ -13,6 +13,6 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             whoami
-            ls -al
-      - name: "AWS CLI"
-        uses: ItsKarma/aws-cli@v1.70.0
+            cd ~
+            aws s3 cp s3://maya-ml/dataset/physical_mental_dataset_v1.zip .
+            ls | grep physical
