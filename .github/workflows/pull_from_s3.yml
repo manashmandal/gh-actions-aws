@@ -7,11 +7,12 @@ jobs:
     steps:
       - name: "ssh"
         uses: appleboy/ssh-actions@master
-        key: ${{ secrets.KEY }}
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
-        script: |
-          whoami
-          ls -al
+        with:
+          key: ${{ secrets.KEY }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          script: |
+            whoami
+            ls -al
       # - name: "AWS CLI"
       #   uses: ItsKarma/aws-cli@v1.70.0
