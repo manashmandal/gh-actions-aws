@@ -5,5 +5,13 @@ jobs:
   pull_from_s3:
     runs-on: ubuntu-latest
     steps:
+      - name: "ssh"
+        uses: appleboy/ssh-actions@master
+        key: ${{ secrets.KEY }}
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        script: |
+          whoami
+          ls -al
       - name: "AWS CLI"
         uses: ItsKarma/aws-cli@v1.70.0
